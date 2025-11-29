@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'second_screen.dart';
-import 'third_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -15,26 +13,16 @@ class MainScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const SecondScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, '/second');
               },
-              child: const Text('Перейти на SecondScreen'),
+              child: const Text("Перейти на '/second'"),
             ),
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const ThirdScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, '/third');
               },
-              child: const Text('Перейти на ThirdScreen'),
+              child: const Text("Перейти на '/third'"),
             ),
           ],
         ),
